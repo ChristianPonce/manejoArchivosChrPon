@@ -26,7 +26,8 @@ public class LeerArchivoBinario {
         Persona per=null;
         String nombre;int edad;double estatura;
         try{
-                    
+     
+            while(per==null){
                 per = (Persona)entrada.readObject();            
                 nombre = per.getNombre();
                 edad = per.getEdad();
@@ -34,7 +35,7 @@ public class LeerArchivoBinario {
                 System.out.println("Nombre: "+nombre);
                 System.out.println("Edad: "+edad);
                 System.out.println("Estatura: "+estatura);
-            
+            }
             } catch (IOException ex) {
             Logger.getLogger(LeerArchivoBinario.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
